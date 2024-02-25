@@ -2,13 +2,13 @@
   "name": "bgio-effects",
   "version": "0.7.1",
   "description": "📤 Helpers for managing state effects in boardgame.io",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "src/index.ts",
   "files": [
     "client/**/*",
     "dist/**/*",
     "plugin/**/*",
-    "react/**/*"
+    "react/**/*",
+    "src/**/*"
   ],
   "scripts": {
     "clean": "rimraf dist",
@@ -20,7 +20,7 @@
     "prettier": "prettier --write --single-quote src",
     "pretest": "npm run lint",
     "test": "jest --coverage --collectCoverageFrom=src/**/*",
-    "prepare": "npm run build",
+    "prepare": "husky install",
     "predocs:build": "rm -f bgio-effects-*.tgz && npm run build && npm pack && cd docs && npm i ../bgio-effects-*.tgz && npm i",
     "docs:build": "cd docs && npm run build"
   },
